@@ -72,7 +72,7 @@
         <!-- Single Event -->
         <div class="event__card">
           <div class="event__image">
-            <img src="../assets/images/UNPROVOKED.png" alt="Event Image">
+            <img src="../assets/images/Unprovoked.png" alt="Event Image">
           </div>
           <div class="event__details">
             <p class="event__name">ISWIS Live show</p>
