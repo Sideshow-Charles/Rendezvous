@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Gilroy-Bold ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/fonts/Gilroy-Bold.woff") format('woff');
+}
+
+
+@font-face {
+    font-family: 'Gilroy-Heavy ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/fonts/Gilroy-Bold.woff") format('woff');
+}
+
+
+@font-face {
+    font-family: 'Gilroy-Light ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/fonts/Gilroy-Light.woff") format('woff');
+}
+
+
+@font-face {
+    font-family: 'Gilroy-Medium ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/fonts/Gilroy-Bold.woff") format('woff');
+}
+
+
+@font-face {
+    font-family: 'Gilroy-Regular ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/fonts/Gilroy-Bold.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy-Regular ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/fonts/Gilroy-ORegular.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy-SemiBold ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/fonts/Gilroy-SemiBold.woff") format('woff');
+}
+
+* {
+    max-width: 109.2rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

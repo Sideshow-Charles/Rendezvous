@@ -1,19 +1,19 @@
 <template>
     <div class="main__header">
         <div class="logo__container">
-            <img src="../../assets/app-logo.png" alt="app logo">
+            <img src="../assets/images/app-logo.png" alt="app logo">
         </div>
 
         <ul class="nav__items__center">
-            <li class="nav__item__center">Discover</li>
-            <li class="nav__item__center">About us</li>
-            <li class="nav__item__center">FAQs</li>
-            <li class="nav__item__center">Contact us</li>
+            <li class="nav__item__center"><nuxt-link to="#">Discover</nuxt-link></li>
+            <li class="nav__item__center"><nuxt-link to="#">About us</nuxt-link></li>
+            <li class="nav__item__center"><nuxt-link to="#">FAQs</nuxt-link></li>
+            <li class="nav__item__center"><nuxt-link to="#">Contact us</nuxt-link></li>
         </ul>
 
         <div class="nav__items__right">
-            <li class="nav__item__right">Log in</li>
-            <button class="sign-up__button">Sign up</button>
+            <li class="nav__item__right"><nuxt-link to="#">Log in</nuxt-link></li>
+            <button class="sign-up__button"><nuxt-link to="#">Sign up</nuxt-link></button>
         </div>
     </div>
 </template>
@@ -49,7 +49,7 @@ export default {
 
 .nav__item__center {
     display: flex;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Gilroy-Bold ☞';
     color: #432361;
     font-style: normal;
     font-weight: 700;
@@ -63,13 +63,14 @@ export default {
 
 .nav__item__right {
     display: flex;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Gilroy-Bold ☞';
+    color: #432361;
     margin: 0 24px
 }
 
 .sign-up__button {
     color: #FFF;
-    font-family: Gilroy-SemiBold;
+    font-family: 'Gilroy-Light ☞';
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
