@@ -97,8 +97,9 @@ export default {
         /* flex-wrap: wrap; */
         width: 360px;
         /* height: 100px; */
-        /* flex-direction: column;
-        padding: 16px 0; */
+        /* flex-direction: column; */
+       padding-left: 12px;
+       padding-right: 12px;
         gap: 20px;
     }
 
