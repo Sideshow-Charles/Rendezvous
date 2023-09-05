@@ -207,7 +207,7 @@ export default {
 
 .event__image img {
   width: 400px;
-  height: 240px;
+  /* height: 240px; */
 }
 
 .event__details {
@@ -386,6 +386,10 @@ export default {
   .hero__text {
     width: 100%;
     font-size: 30px;
+  }
+
+  .discover__text {
+    width: 100%;
   }
 }
 </style>

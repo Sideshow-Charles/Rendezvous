@@ -191,4 +191,11 @@ export default {
         padding-right: 16px;
     }
 }
+
+@media screen and (max-width: 280px) {
+    .footer__item__left__text__container {
+       width: 100%;
+
+    }
+}
 </style>

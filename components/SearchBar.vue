@@ -112,14 +112,29 @@ export default {
 }
 
 @media screen and (max-width: 375px) {
-  .search-bar__container {
-    width: 360px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
+    .search-bar__container {
+        width: 360px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 
-  .input__container input {
+    .input__container input {
         text-align: center;
     }
+}
+
+@media screen and (max-width: 280px) {
+    .search-bar__container {
+        width: 250px;
+    }
+
+    .input__container input {
+        font-size: 12px;
+    }
+
+    .category__container select {
+        font-size: 10px;
+    }
+
 }
 </style>
