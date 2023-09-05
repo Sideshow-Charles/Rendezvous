@@ -16,7 +16,7 @@
             <li class="nav__item__right"><nuxt-link to="#">Log in</nuxt-link></li>
             <button class="sign-up__button"><nuxt-link to="#">Sign up</nuxt-link></button>
 
-            <!-- navigation menu -->
+            <!-- navigation menu icon -->
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="20" viewBox="0 0 50 50"
                 style="fill:#432361;" class="hamburger__menu__icon">
                 <path
@@ -138,6 +138,8 @@ export default {
     .main__header {
         width: 90%;
         margin: 0 auto;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
     .logo__container img {
@@ -146,6 +148,7 @@ export default {
 }
 
 @media screen and (max-width: 480px) {
+    
     .logo__container img {
         width: 100px;
     }

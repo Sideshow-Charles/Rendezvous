@@ -207,9 +207,9 @@ export default {
     } */
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 320px) {
     .footer__item__left__text__container {
-       width: 100%;
+        width: 100%;
 
     }
 }

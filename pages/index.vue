@@ -311,9 +311,10 @@ export default {
 }
 
 @media screen and (max-width: 968px) {
-  /* .event__card__container {
-    flex-wrap: wrap;
-  } */
+  .event__card,
+  .event__image img {
+    width: 100%;
+  }
 
   .discover__container {
     flex-direction: column;
@@ -348,7 +349,7 @@ export default {
   }
 
   .discover__text {
-    width: 280px;
+    width: 320px;
     font-size: 24px;
   }
 
@@ -383,14 +384,14 @@ export default {
   }
 
   .discover__container {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
   }
 
-  .discover__text__container {
+  /* .discover__text__container {
     margin-left: 16px;
     margin-right: 16px;
-  }
+  } */
 
   .discover__images__container img {
     width: 100%;

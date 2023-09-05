@@ -95,7 +95,7 @@ export default {
 @media screen and (max-width: 480px) {
     .search-bar__container {
         /* flex-wrap: wrap; */
-        width: 370px;
+        width: 360px;
         /* height: 100px; */
         /* flex-direction: column;
         padding: 16px 0; */
@@ -113,7 +113,7 @@ export default {
 
 @media screen and (max-width: 375px) {
     .search-bar__container {
-        width: 360px;
+        width: 350px;
         padding-left: 8px;
         padding-right: 8px;
     }
@@ -123,7 +123,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 320px) {
     .search-bar__container {
         width: 250px;
     }
