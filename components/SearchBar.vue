@@ -102,9 +102,9 @@ export default {
         gap: 20px;
     }
 
-    .input__container input {
+    /* .input__container input {
         text-align: left;
-    }
+    } */
 
     .search__button {
         display: none;
@@ -113,7 +113,9 @@ export default {
 
 @media screen and (max-width: 375px) {
   .search-bar__container {
-    width: 350px;
+    width: 360px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
 </style>
