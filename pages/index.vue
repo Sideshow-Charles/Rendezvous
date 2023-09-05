@@ -332,21 +332,28 @@ export default {
     margin-right: 16px;
   }
 
-  .events__header__container {
+  /* .events__header__container {
     margin: 0 16px;
-  }
+  } */
 }
 
 @media screen and (max-width: 480px) {
 
-  /* .hero__items__container {
-    overflow: hidden;
-  } */
+  .hero__items__container {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
   .hero__text {
     width: 100%;
     font-size: 30px;
-    margin-left: 8px;
-    margin-right: 8px;
+  }
+
+  .events__header__container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
 
   .event__card__container {
