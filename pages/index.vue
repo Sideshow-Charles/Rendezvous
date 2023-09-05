@@ -93,7 +93,7 @@
     <!-- End of Event Container-->
 
     <!-- Discover Section -->
-    <!-- <section class="discover__container">
+    <section class="discover__container">
       <section class="discover__text__container">
         <p class="discover__text">Discover a World of Events Tailored Just for You.</p>
         <button class="CTA-discover__events">View all events</button>
@@ -103,7 +103,7 @@
         <img src="../assets/images/physical.png" alt="discover online images">
         <img src="../assets/images/hybrid.png" alt="discover online images">
       </section>
-    </section> -->
+    </section>
     <!-- End of Discover Section -->
 
     <!-- Footer Component -->
@@ -252,7 +252,7 @@ export default {
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
-  /* gap: 92px; */
+  gap: 92px;
   /* overflow: hidden; */
 }
 
@@ -263,7 +263,7 @@ export default {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  /* width: 393px; */
+  width: 393px;
   margin-top: 24px;
 }
 
@@ -276,6 +276,7 @@ export default {
   line-height: normal;
   border-radius: 10px;
   padding: 12px 24px;
+  margin-top: 24px;
   background: #783EAD;
   border: none;
   cursor: pointer;
@@ -283,8 +284,9 @@ export default {
 
 .discover__images__container {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 20px;
 }
 
 .discover__images__container img {
@@ -313,6 +315,19 @@ export default {
   .event__card__container {
     justify-content: center;
   }
+
+  .discover__container {
+    flex-direction: column;
+  }
+
+  .discover__images__container {
+    justify-content: center;
+  }
+
+  .discover__images__container img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -323,6 +338,12 @@ export default {
   .events__header__text__right {
     font-size: 16px;
   }
+
+  .discover__text {
+    width: 280px;
+    font-size: 24px;
+  }
+  
 }
 
 @media screen and (max-width: 540px) {
@@ -330,22 +351,6 @@ export default {
     width: 450px;
     margin-left: 16px;
     margin-right: 16px;
-  }
-
-  /* .events__header__container {
-    margin: 0 16px;
-  } */
-}
-
-@media screen and (max-width: 480px) {
-
-  .hero__items__container {
-    margin-left: 16px;
-    margin-right: 16px;
-  }
-  .hero__text {
-    width: 100%;
-    font-size: 30px;
   }
 
   .events__header__container {
@@ -364,6 +369,23 @@ export default {
   .event__card,
   .event__image img {
     width: 100%;
+  }
+
+  .discover__container {
+    margin-left: 16px;
+    margin-right: 16px;
+  } 
+}
+
+@media screen and (max-width: 480px) {
+
+  .hero__items__container {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .hero__text {
+    width: 100%;
+    font-size: 30px;
   }
 }
 </style>

@@ -54,8 +54,8 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 350px;
-    overflow: hidden;
+    /* gap: 350px; */
+    /* overflow: hidden; */
 }
 
 .footer__logo__container img {
@@ -73,7 +73,7 @@ export default {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.5;
 }
 
 .footer__items__right {
@@ -168,5 +168,27 @@ export default {
     line-height: normal;
     list-style: none;
     margin-bottom: 12px
+}
+
+@media screen and (max-width: 968px) {
+    .footer__container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer__items__right {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer__container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
 </style>
