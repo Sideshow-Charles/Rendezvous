@@ -95,12 +95,16 @@ export default {
 @media screen and (max-width: 480px) {
     .search-bar__container {
         /* flex-wrap: wrap; */
-        width: 400px;
+        width: 300px;
+        height: 100px;
+        flex-direction: column;
+        padding: 16px 0;
+        gap: 20px;
     }
 
-    /* .line {
+    .line {
         display: none;
-    } */
+    }
 
     .search__button {
         display: none;

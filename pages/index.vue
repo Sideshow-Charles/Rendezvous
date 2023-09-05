@@ -338,8 +338,25 @@ export default {
 }
 
 @media screen and (max-width: 480px) {
+
+  /* .hero__items__container {
+    overflow: hidden;
+  } */
   .hero__text {
-    font-size: 24px;
+    width: 100%;
+    font-size: 30px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .event__card__container {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .event__card,
+  .event__image img {
+    width: 100%;
   }
 }
 </style>
