@@ -114,5 +114,11 @@ export default {
         margin-right: 16px;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .logo__container img {
+        width: 100px;
+    }
+}
 </style>
 

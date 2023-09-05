@@ -89,11 +89,21 @@ export default {
     .search-bar__container {
         width: 460px;
         height: 70px;
-        /* margin: 0 64px; */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-bar__container {
+        /* flex-wrap: wrap; */
+        width: 400px;
     }
 
     /* .line {
         display: none;
     } */
+
+    .search__button {
+        display: none;
+    }
 }
 </style>

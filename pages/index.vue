@@ -336,4 +336,10 @@ export default {
     margin: 0 16px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .hero__text {
+    font-size: 24px;
+  }
+}
 </style>
