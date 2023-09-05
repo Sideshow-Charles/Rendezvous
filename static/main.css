@@ -52,8 +52,8 @@
 }
 
 * {
-    max-width: 96rem;
-    margin: 0;
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -62,4 +62,20 @@
 a {
     text-decoration: none;
     color: inherit;
+}
+
+p {
+    margin: 0 !important;
+}
+
+footer {
+    margin: 0 !important;
+}
+
+img {
+    margin: 0 !important;
+}
+
+ul {
+    margin: 0 !important;
 }

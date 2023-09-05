@@ -125,13 +125,6 @@ export default {
 }
 </script>
 <style scoped>
-/* #landing__page {
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
-  max-width: 106rem;
-} */
-
 .hero__section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-image.png");
   background-size: cover;
@@ -143,8 +136,7 @@ export default {
 
 .hero__items__container {
   display: flex;
-  justify-content: space-between;
-  /* gap: 121px; */
+  gap: 121px;
   margin: 350px 64px 82px 64px;
 }
 
@@ -190,11 +182,11 @@ export default {
 
 .event__card__container {
   display: flex;
-  /* gap: 24px; */
+  gap: 24px;
   align-items: center;
   margin: 47px 64px 100px 64px;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 .event__card {
@@ -252,8 +244,12 @@ export default {
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
-  gap: 92px;
+  gap: 52px;
   /* overflow: hidden; */
+}
+
+.discover__text__container {
+  margin-top: 24px;
 }
 
 .discover__text {
@@ -264,7 +260,7 @@ export default {
   font-weight: 400;
   line-height: normal;
   width: 393px;
-  margin-top: 24px;
+  margin-top: 128px;
 }
 
 .CTA-discover__events {
@@ -284,13 +280,14 @@ export default {
 
 .discover__images__container {
   display: flex;
-  justify-content: space-between;
+  /* flex-flow: column wrap; */
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
 }
 
 .discover__images__container img {
-  width: 400px;
+  width: 421px;
+
   /* height: 240px; */
 }
 
@@ -303,29 +300,40 @@ export default {
     align-items: center;
     margin-top: 200px;
     gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero__text {
-    width: 100%;
+    /* width: 100%; */
     font-size: 38px;
   }
 }
 
 @media screen and (max-width: 968px) {
-  .event__card__container {
-    justify-content: center;
-  }
+  /* .event__card__container {
+    flex-wrap: wrap;
+  } */
 
   .discover__container {
     flex-direction: column;
   }
 
-  .discover__images__container {
-    justify-content: center;
+  .discover__text__container {
+    flex-direction: column;
+    margin-left: 16px;
+    margin-right: 16px;
   }
 
+  .discover__images__container {
+    margin-left: 16px;
+    margin-right: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  } 
+
   .discover__images__container img {
-    width: 100%;
+    width: 45%;
     height: auto;
   }
 }
@@ -343,14 +351,17 @@ export default {
     width: 280px;
     font-size: 24px;
   }
-  
+
 }
 
 @media screen and (max-width: 540px) {
+  /* .hero__items__container {
+    margin: 0 auto;
+  } */
   .hero__text {
     width: 450px;
-    margin-left: 16px;
-    margin-right: 16px;
+    /* margin-left: 16px;
+    margin-right: 16px; */
   }
 
   .events__header__container {
@@ -374,7 +385,16 @@ export default {
   .discover__container {
     margin-left: 16px;
     margin-right: 16px;
-  } 
+  }
+
+  .discover__text__container {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .discover__images__container img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -383,6 +403,7 @@ export default {
     margin-left: 16px;
     margin-right: 16px;
   }
+
   .hero__text {
     width: 100%;
     font-size: 30px;

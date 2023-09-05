@@ -54,8 +54,8 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* gap: 350px; */
-    /* overflow: hidden; */
+    /* margin-left: 64px;
+    margin-right: 64px; */
 }
 
 .footer__logo__container img {
@@ -63,7 +63,6 @@ export default {
 }
 
 .footer__item__left__text__container {
-    margin-top: 8px;
     width: 332px;
 }
 
@@ -74,6 +73,7 @@ export default {
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
+    padding-top: 20px;
 }
 
 .footer__items__right {
@@ -181,6 +181,7 @@ export default {
 @media screen and (max-width: 768px) {
     .footer__items__right {
         flex-direction: column;
+        align-items: center;
         gap: 40px;
     }
 }
@@ -189,6 +190,13 @@ export default {
     .footer__container {
         padding-left: 16px;
         padding-right: 16px;
+    }
+
+    .features,
+    .feature__items,
+    .company,
+    .company__item {
+        width: 100%;
     }
 }
 

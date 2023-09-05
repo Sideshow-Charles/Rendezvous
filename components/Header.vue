@@ -35,16 +35,21 @@ export default {
 
 <style scoped>
 .main__header {
+    align-items: center;
+    background: hsla(0, 0%, 100%, .6);
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.60);
-    z-index: 1000;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin: 0 62px;
     padding: 12px 24px;
+    /* width: 1312px; */
     position: relative;
     top: 50px;
-    margin: 0 62px;
+    z-index: 1000;
+}
+
+.logo__container {
+    margin: 0 24px;
 }
 
 .logo__container img {
@@ -68,6 +73,7 @@ export default {
 .nav__items__right {
     display: flex;
     align-items: center;
+    margin: 0 24px
 }
 
 .nav__item__right {
@@ -95,7 +101,8 @@ export default {
     cursor: pointer;
 }
 
-@media screen and (max-width: 980px) {
+
+@media screen and (max-width: 1070px) {
 
     .nav__items__center,
     .nav__item__right,
@@ -108,10 +115,33 @@ export default {
     }
 }
 
+@media screen and (max-width: 980px) {
+    .main__header {
+        width: 80%;
+        margin: 0 auto;
+        /* padding-left: 12px;
+        padding-right: 12px; */
+    }
+
+    /* .nav__items__center,
+    .nav__item__right,
+    .sign-up__button {
+        display: none;
+    }
+
+    .hamburger__menu__icon {
+        display: block;
+    } */
+}
+
 @media screen and (max-width: 540px) {
     .main__header {
-        margin-left: 16px;
-        margin-right: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .logo__container img {
+        width: 100px;
     }
 }
 
