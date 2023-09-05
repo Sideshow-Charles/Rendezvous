@@ -102,9 +102,9 @@ export default {
         gap: 20px;
     }
 
-    /* .line {
-        display: none;
-    } */
+    .input__container input {
+        text-align: left;
+    }
 
     .search__button {
         display: none;
