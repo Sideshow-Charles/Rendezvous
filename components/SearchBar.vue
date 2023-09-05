@@ -102,9 +102,9 @@ export default {
         gap: 20px;
     }
 
-    /* .input__container input {
+    .input__container input {
         text-align: left;
-    } */
+    }
 
     .search__button {
         display: none;
@@ -117,5 +117,9 @@ export default {
     padding-left: 8px;
     padding-right: 8px;
   }
+
+  .input__container input {
+        text-align: center;
+    }
 }
 </style>
