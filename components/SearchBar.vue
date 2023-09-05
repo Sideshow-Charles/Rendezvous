@@ -114,7 +114,7 @@ export default {
 
 @media screen and (max-width: 375px) {
     .search-bar__container {
-        width: 350px;
+        width: 330px;
         padding-left: 8px;
         padding-right: 8px;
     }

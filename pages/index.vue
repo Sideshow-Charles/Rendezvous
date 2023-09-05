@@ -45,6 +45,11 @@
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
               laboris
               nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="event__link">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="16" height="16" transform="translate(0 0.5)" fill="white" style="mix-blend-mode:multiply" />
+                <path d="M5 3.5V4.5H11.295L3 12.795L3.705 13.5L12 5.205V11.5H13V3.5H5Z" fill="#432361" />
+              </svg></p>
           </div>
         </div>
 
@@ -65,6 +70,11 @@
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
               laboris
               nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="event__link">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="16" height="16" transform="translate(0 0.5)" fill="white" style="mix-blend-mode:multiply" />
+                <path d="M5 3.5V4.5H11.295L3 12.795L3.705 13.5L12 5.205V11.5H13V3.5H5Z" fill="#432361" />
+              </svg></p>
           </div>
         </div>
         <!-- End of Single Event -->
@@ -84,6 +94,11 @@
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
               laboris
               nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="event__link">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="16" height="16" transform="translate(0 0.5)" fill="white" style="mix-blend-mode:multiply" />
+                <path d="M5 3.5V4.5H11.295L3 12.795L3.705 13.5L12 5.205V11.5H13V3.5H5Z" fill="#432361" />
+              </svg></p>
           </div>
         </div>
         <!-- End of Single Event -->
@@ -125,6 +140,10 @@ export default {
 }
 </script>
 <style scoped>
+#landing__page {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .hero__section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-image.png");
   background-size: cover;
@@ -237,6 +256,17 @@ export default {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
+  /* margin-bottom: 24px; */
+}
+
+.event__link {
+  color: #432361;
+  font-family: 'Gilroy-Regular ☞';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 24px;
 }
 
 .discover__container {
@@ -311,6 +341,7 @@ export default {
 }
 
 @media screen and (max-width: 968px) {
+
   .event__card,
   .event__image img {
     width: 100%;
@@ -331,7 +362,7 @@ export default {
     margin-right: 16px;
     flex-direction: row;
     flex-wrap: wrap;
-  } 
+  }
 
   .discover__images__container img {
     width: 45%;
@@ -356,6 +387,7 @@ export default {
 }
 
 @media screen and (max-width: 540px) {
+
   /* .hero__items__container {
     margin: 0 auto;
   } */
