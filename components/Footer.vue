@@ -184,6 +184,13 @@ export default {
         align-items: center;
         gap: 40px;
     }
+
+    .features,
+    .feature__items,
+    .company,
+    .company__item {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -192,12 +199,12 @@ export default {
         padding-right: 16px;
     }
 
-    .features,
+    /* .features,
     .feature__items,
     .company,
     .company__item {
         width: 100%;
-    }
+    } */
 }
 
 @media screen and (max-width: 280px) {
