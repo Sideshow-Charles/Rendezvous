@@ -52,8 +52,10 @@ export default {
     background-color: #432361;
     padding: 64px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 350px;
+    overflow: hidden;
 }
 
 .footer__logo__container img {
@@ -107,7 +109,7 @@ export default {
     font-weight: 400;
     line-height: normal;
     list-style: none;
-    margin-bottom: 18px
+    margin-bottom: 12px
 }
 
 .company {
@@ -136,7 +138,7 @@ export default {
     font-weight: 400;
     line-height: normal;
     list-style: none;
-    margin-bottom: 18px
+    margin-bottom: 12px
 }
 
 .contact {
@@ -165,6 +167,6 @@ export default {
     font-weight: 400;
     line-height: normal;
     list-style: none;
-    margin-bottom: 18px
+    margin-bottom: 12px
 }
 </style>

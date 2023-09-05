@@ -1,5 +1,5 @@
 <template>
-  <div class="landing__page">
+  <div id="landing__page">
     <!-- Landing Page Hero Section -->
     <div class="hero__section">
       <!-- Header Component -->
@@ -93,7 +93,7 @@
     <!-- End of Event Container-->
 
     <!-- Discover Section -->
-    <section class="discover__container">
+    <!-- <section class="discover__container">
       <section class="discover__text__container">
         <p class="discover__text">Discover a World of Events Tailored Just for You.</p>
         <button class="CTA-discover__events">View all events</button>
@@ -103,7 +103,7 @@
         <img src="../assets/images/physical.png" alt="discover online images">
         <img src="../assets/images/hybrid.png" alt="discover online images">
       </section>
-    </section>
+    </section> -->
     <!-- End of Discover Section -->
 
     <!-- Footer Component -->
@@ -125,20 +125,27 @@ export default {
 }
 </script>
 <style scoped>
+/* #landing__page {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 106rem;
+} */
+
 .hero__section {
-  background-image: url("../assets/images/hero-image.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-image.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: lightgray;
-  background-position: 50%;
+  /* filter: brightness(60%); */
   height: 640px;
 }
 
 .hero__items__container {
   display: flex;
   justify-content: space-between;
-  gap: 121px;
-  margin: 350px 64px 0 64px;
+  /* gap: 121px; */
+  margin: 350px 64px 82px 64px;
 }
 
 .hero__text {
@@ -186,18 +193,20 @@ export default {
   gap: 24px;
   align-items: center;
   margin: 47px 64px 100px 64px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .event__card {
-  width: 421px;
-  height: 488px;
+  width: 400px;
+  /* height: 488px; */
   border-radius: 10px;
   border: 1px solid #E0E0E0;
   background: #FFF;
 }
 
 .event__image img {
-  width: 421px;
+  width: 400px;
   height: 240px;
 }
 
@@ -241,7 +250,10 @@ export default {
 .discover__container {
   margin: 227px 64px 123px 64px;
   display: flex;
-  gap: 92px;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* gap: 92px; */
+  /* overflow: hidden; */
 }
 
 .discover__text {
@@ -251,8 +263,8 @@ export default {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 393px;
-  margin: 48px 0 24px 0;
+  /* width: 393px; */
+  margin-top: 24px;
 }
 
 .CTA-discover__events {
@@ -278,5 +290,50 @@ export default {
 .discover__images__container img {
   width: 400px;
   height: 240px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1100px) {
+  .hero__items__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    gap: 30px;
+  }
+
+  .hero__text {
+    width: 100%;
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .event__card__container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .events__header__text__left {
+    font-size: 18px;
+  }
+
+  .events__header__text__right {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .hero__text {
+    width: 450px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .events__header__container {
+    margin: 0 16px;
+  }
 }
 </style>

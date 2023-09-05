@@ -4,6 +4,7 @@
             <img src="../assets/images/app-logo.png" alt="app logo">
         </div>
 
+
         <ul class="nav__items__center">
             <li class="nav__item__center"><nuxt-link to="#">Discover</nuxt-link></li>
             <li class="nav__item__center"><nuxt-link to="#">About us</nuxt-link></li>
@@ -14,6 +15,14 @@
         <div class="nav__items__right">
             <li class="nav__item__right"><nuxt-link to="#">Log in</nuxt-link></li>
             <button class="sign-up__button"><nuxt-link to="#">Sign up</nuxt-link></button>
+
+            <!-- navigation menu -->
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="20" viewBox="0 0 50 50"
+                style="fill:#432361;" class="hamburger__menu__icon">
+                <path
+                    d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z">
+                </path>
+            </svg>
         </div>
     </div>
 </template>
@@ -79,6 +88,31 @@ export default {
     padding: 12px 24px;
     background: #783EAD;
     border: none;
+}
+
+.hamburger__menu__icon {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 968px) {
+
+    .nav__items__center,
+    .nav__item__right,
+    .sign-up__button {
+        display: none;
+    }
+
+    .hamburger__menu__icon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .main__header {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
 }
 </style>
 

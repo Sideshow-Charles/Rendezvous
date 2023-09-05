@@ -40,7 +40,6 @@ export default {
     padding: 0px 24px;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
     border-radius: 20px;
 }
 
@@ -84,5 +83,17 @@ export default {
     background: #783EAD;
     border: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .search-bar__container {
+        width: 460px;
+        height: 70px;
+        /* margin: 0 64px; */
+    }
+
+    /* .line {
+        display: none;
+    } */
 }
 </style>
