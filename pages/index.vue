@@ -190,15 +190,15 @@ export default {
 
 .event__card__container {
   display: flex;
-  gap: 24px;
+  /* gap: 24px; */
   align-items: center;
   margin: 47px 64px 100px 64px;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .event__card {
-  width: 400px;
+  width: 421px;
   /* height: 488px; */
   border-radius: 10px;
   border: 1px solid #E0E0E0;
@@ -206,7 +206,7 @@ export default {
 }
 
 .event__image img {
-  width: 400px;
+  width: 421px;
   /* height: 240px; */
 }
 
@@ -291,7 +291,7 @@ export default {
 
 .discover__images__container img {
   width: 400px;
-  height: 240px;
+  /* height: 240px; */
 }
 
 /* Media Queries */

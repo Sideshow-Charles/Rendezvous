@@ -185,7 +185,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 540px) {
     .footer__container {
         padding-left: 16px;
         padding-right: 16px;

@@ -95,7 +95,7 @@ export default {
     cursor: pointer;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 980px) {
 
     .nav__items__center,
     .nav__item__right,
