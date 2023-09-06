@@ -1,5 +1,6 @@
 <template>
     <footer class="footer__container">
+        <footer class="footer__items">
         <footer class="footer__items__left">
             <footer class="footer__logo__container">
                 <img src="../assets/images/footerlogo.png" alt="footer logo">
@@ -39,6 +40,7 @@
             </div>
         </footer>
     </footer>
+    </footer>
 </template>
 
 <script>
@@ -54,8 +56,15 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-left: 64px;
-    margin-right: 64px; */
+}
+
+.footer__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 350px;
+    /* max-width: 90rem;
+    margin: 0 auto; */
 }
 
 .footer__logo__container img {
@@ -168,6 +177,22 @@ export default {
     line-height: normal;
     list-style: none;
     margin-bottom: 12px
+}
+
+@media screen and (min-width: 1600px) {
+    .footer__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90rem;
+    margin: 0 auto;
+}
 }
 
 @media screen and (max-width: 968px) {

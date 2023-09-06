@@ -42,10 +42,10 @@ export default {
     justify-content: space-between;
     margin: 0 62px;
     padding: 12px 24px;
-    /* width: 1312px; */
+    /* width: 1312px;*/
     position: relative;
     top: 50px;
-    z-index: 1000;
+    z-index: 1000; 
 }
 
 .logo__container {
@@ -101,6 +101,15 @@ export default {
     cursor: pointer;
 }
 
+@media screen and (min-width: 1600px) {
+    .main__header {
+        width: 1312px;
+        margin: 0 auto;
+        /* position: relative;
+        top: 50px;
+        z-index: 1000;*/
+    } 
+}
 
 @media screen and (max-width: 1070px) {
 
@@ -148,7 +157,7 @@ export default {
 }
 
 @media screen and (max-width: 480px) {
-    
+
     .logo__container img {
         width: 100px;
     }

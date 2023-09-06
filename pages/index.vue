@@ -14,6 +14,8 @@
     </div>
     <!-- End of Landing Page Hero Section-->
 
+    <section class="landing__page__body">
+
     <!--Events Container -->
     <section class="events__container">
       <!-- Events Header -->
@@ -119,6 +121,7 @@
         <img src="../assets/images/hybrid.png" alt="discover online images">
       </section>
     </section>
+  </section>
     <!-- End of Discover Section -->
 
     <!-- Footer Component -->
@@ -141,22 +144,28 @@ export default {
 </script>
 <style scoped>
 #landing__page {
-  max-width: 1440px;
-  margin: 0 auto;
+  overflow-x: hidden;
 }
+
 .hero__section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-image.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: lightgray;
   /* filter: brightness(60%); */
-  height: 640px;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  height: 800px;
 }
 
 .hero__items__container {
   display: flex;
+  justify-content: center;
   gap: 121px;
-  margin: 350px 64px 82px 64px;
+  margin: 450px 64px 82px 64px;
 }
 
 .hero__text {
@@ -170,8 +179,13 @@ export default {
   z-index: 999;
 }
 
+.landing__page__body {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
 .events__container {
-  margin-top: 64px;
+  margin-top: 850px;
 }
 
 .events__header__container {
@@ -209,7 +223,7 @@ export default {
 }
 
 .event__card {
-  width: 421px;
+  width: 410px;
   /* height: 488px; */
   border-radius: 10px;
   border: 1px solid #E0E0E0;
@@ -217,7 +231,7 @@ export default {
 }
 
 .event__image img {
-  width: 421px;
+  width: 410px;
   /* height: 240px; */
 }
 
@@ -274,7 +288,7 @@ export default {
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
-  gap: 52px;
+  gap: 60px;
   /* overflow: hidden; */
 }
 
@@ -316,7 +330,7 @@ export default {
 }
 
 .discover__images__container img {
-  width: 421px;
+  width: 410px;
 
   /* height: 240px; */
 }
