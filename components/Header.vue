@@ -1,5 +1,5 @@
 <template>
-    <div class="main__header">
+    <div class="main__header" :class="headerStyle">
         <div class="logo__container">
             <img src="../assets/images/app-logo.png" alt="app logo">
         </div>
@@ -29,6 +29,14 @@
 
 <script>
 export default {
+    name: 'Headers',
+    // Using the header as a component to avoid repetition, which then leads to populating the codebase.
+    props: {
+        headerStyle: {
+            type: String,
+            default: ''
+        }
+    }
 
 }
 </script>
@@ -40,13 +48,22 @@ export default {
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
-    margin: 0 62px;
+    margin: 0 64px;
     padding: 12px 24px;
     /* width: 1312px;*/
     position: relative;
     top: 50px;
-    z-index: 1000; 
+    z-index: 1000;
 }
+/* Header Styling For The Alternative Header */
+.view-event__header {
+    background: transparent;
+    position: static;
+    margin-top: 40px;
+    margin-bottom: 46px;
+}
+
+/* End of Header Styling For The Alternative Header */
 
 .logo__container {
     margin: 0 24px;
@@ -66,7 +83,7 @@ export default {
     font-family: 'Gilroy-Bold ☞';
     color: #432361;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     margin: 0 24px
 }
 
@@ -108,10 +125,10 @@ export default {
         /* position: relative;
         top: 50px;
         z-index: 1000;*/
-    } 
+    }
 }
 
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 1075px) {
 
     .nav__items__center,
     .nav__item__right,
@@ -132,15 +149,18 @@ export default {
         padding-right: 12px; */
     }
 
-    /* .nav__items__center,
-    .nav__item__right,
-    .sign-up__button {
-        display: none;
+    .view-event__header {
+        padding-top: 50px;
     }
+}
 
-    .hamburger__menu__icon {
-        display: block;
-    } */
+@media screen and (max-width: 768px) {
+    .view-event__header {
+        width: 95%;
+        margin: 0 16px !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media screen and (max-width: 540px) {
