@@ -165,7 +165,7 @@ export default {
 }
 
 .hero__image__container {
-    padding: 0 64px;
+    margin: 0 64px;
 }
 
 .hero__image__container img {
@@ -365,27 +365,28 @@ export default {
 
 @media screen and (max-width: 768px) {
 
-    .hero__image__container,
+    .hero__image__container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
     .event__details__container {
         padding-left: 16px;
         padding-right: 16px;
     }
+
     .hero__image__container img {
-    width: 100%;
+        width: 100%;
     }
 }
 
-/* @media screen and (max-width: 540px) {
+@media screen and (max-width: 540px) {
 
-    .hero__image__container,
-    .event__details__container {
-        padding-left: 16px;
-        padding-right: 16px;
+    .event__date,
+    .event__time,
+    .event__organizer,
+    .event__address {
+        font-size: 12px;
     }
-
-    .hero__image__container img {
-    width: 100%;
-    border-radius: 10px;
-} */
-
+}
 </style>

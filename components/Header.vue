@@ -156,8 +156,9 @@ export default {
 
 @media screen and (max-width: 768px) {
     .view-event__header {
-        width: 95%;
-        margin: 0 16px !important;
+       width: auto;
+        margin-left: 0;
+        margin-right: 0;
         padding-left: 0;
         padding-right: 0;
     }
@@ -169,6 +170,14 @@ export default {
         margin: 0 auto;
         padding-left: 8px;
         padding-right: 8px;
+    }
+
+    .view-event__header {
+       width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .logo__container img {
