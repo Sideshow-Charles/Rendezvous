@@ -98,8 +98,8 @@ export default {
         width: 360px;
         /* height: 100px; */
         /* flex-direction: column; */
-       padding-left: 12px;
-       padding-right: 12px;
+        padding-left: 12px;
+        padding-right: 12px;
         gap: 20px;
     }
 
@@ -121,6 +121,13 @@ export default {
 
     .input__container input {
         text-align: center;
+        font-size: 12px;
+    }
+
+    .category__container select {
+
+        text-align: center;
+        font-size: 12px;
     }
 }
 
