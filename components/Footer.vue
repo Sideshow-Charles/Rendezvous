@@ -60,7 +60,7 @@ export default {
 
 .footer__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 350px;
     /* max-width: 90rem;
@@ -195,8 +195,13 @@ export default {
 }
 }
 
-@media screen and (max-width: 968px) {
-    .footer__container {
+@media screen and (max-width: 1070px) {
+    /* .footer__container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 70px;
+    } */
+    .footer__items {
         flex-direction: column;
         align-items: flex-start;
         gap: 70px;
