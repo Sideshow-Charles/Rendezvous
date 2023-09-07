@@ -136,6 +136,7 @@ import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import Footer from "../components/Footer";
 import axios from "axios"
+import apiService from "../services/apiService";
 export default {
   components: {
     Header,
@@ -149,17 +150,18 @@ export default {
   },
 
   async created() {
-    const fetchOptions = {
-      method: 'GET',
+    const callOptions = {
       mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
       },
-    };
-
-    fetch("https://rendezvous-events.onrender.com/events", fetchOptions)
-      .then(response => response.json())
-      .then(data => { console.log(data) })
+    }
+    try {
+      const response = await apiService.get('https://rendezvous-events.onrender.com/events', callOptions);
+      this.events = response.data
+    } catch (error) {
+      console.error('error fetching events:', error);
+    }
   }
 
 }

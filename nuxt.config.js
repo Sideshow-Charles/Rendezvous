@@ -20,7 +20,8 @@ export default {
   },
 
   axios: {
-    baseURL: 'https://api.example.com',
+    baseURL: 'https://rendezvous-events.onrender.com/events', // api base URL
+    credentials: true, // Include cookies and authentication headers
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -42,6 +43,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // '@nuxtjs/axios',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

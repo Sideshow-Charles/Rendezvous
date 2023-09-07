@@ -1,7 +1,7 @@
 <template>
     <div class="main__header" :class="headerStyle">
         <div class="logo__container">
-            <img src="../assets/images/app-logo.png" alt="app logo">
+            <nuxt-link to="/"><img src="../assets/images/app-logo.png" alt="app logo"></nuxt-link>
         </div>
 
 
