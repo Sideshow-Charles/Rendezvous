@@ -15,6 +15,8 @@
             <section class="event__details__container">
                 <section class="event__details__left">
                     <p class="event__name">{{ event.title }}</p>
+
+                    <p class="event__category">Category: {{ event.category }}</p>
                     <div class="event__date_and__time__container">
                         <div class="event__date"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -178,6 +180,16 @@ export default {
 }
 
 .event__name {
+    color: #000;
+    font-family: 'Gilroy-Medium ☞';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 16px;
+}
+
+.event__category {
     color: #000;
     font-family: 'Gilroy-Medium ☞';
     font-size: 24px;
