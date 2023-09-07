@@ -150,14 +150,16 @@ export default {
   },
 
   async created() {
-    const callOptions = {
-      mode: 'no-cors',
-      headers: {
+    // const callOptions = {
+      // mode: 'no-cors',
+     const headers = {
         'Content-Type': 'application/json',
-      },
-    }
+        'Access-Control-Allow-Origin': '*'
+
+      }
+    // }
     try {
-      const response = await apiService.get('https://rendezvous-events.onrender.com/events', callOptions);
+      const response = await apiService.get('https://rendezvous-events.onrender.com/events', headers);
       this.events = response.data
     } catch (error) {
       console.error('error fetching events:', error);
