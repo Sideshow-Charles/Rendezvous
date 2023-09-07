@@ -61,7 +61,7 @@
       <section class="discover__container">
         <section class="discover__text__container">
           <p class="discover__text">Discover a World of Events Tailored Just for You.</p>
-          <button class="CTA-discover__events">View all events</button>
+          <Button>View all events</Button>
         </section>
         <section class="discover__images__container">
           <img src="../assets/images/online.png" alt="discover online images">
@@ -82,12 +82,15 @@
 import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import Footer from "../components/Footer";
+import Button from "../components/Button";
 export default {
   components: {
     Header,
     SearchBar,
-    Footer
+    Footer,
+    Button
   },
+  
   data() {
     return {
       events: []

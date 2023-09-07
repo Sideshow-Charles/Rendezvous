@@ -14,7 +14,10 @@
 
         <div class="nav__items__right">
             <li class="nav__item__right"><nuxt-link to="#">Log in</nuxt-link></li>
-            <button class="sign-up__button"><nuxt-link to="#">Sign up</nuxt-link></button>
+
+            <!-- Button Component -->
+            <Button>Sign up</Button>
+            <!-- End of Button Component -->
 
             <!-- navigation menu icon -->
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="20" viewBox="0 0 50 50"
@@ -28,7 +31,12 @@
 </template>
 
 <script>
+import Button from "../components/Button"
 export default {
+    components: {
+        Button
+    },
+
     name: 'Headers',
     // Using the header as a component to avoid repetition, which then leads to populating the codebase.
     props: {
@@ -100,7 +108,7 @@ export default {
     margin: 0 24px
 }
 
-.sign-up__button {
+/* .sign-up__button {
     color: #FFF;
     font-family: 'Gilroy-Light ☞';
     font-size: 16px;
@@ -111,7 +119,7 @@ export default {
     padding: 12px 24px;
     background: #783EAD;
     border: none;
-}
+} */
 
 .hamburger__menu__icon {
     display: none;

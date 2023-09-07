@@ -13,13 +13,20 @@
         </div>
 
         <div class="search-button__container">
-            <button class="search__button">Search</button>
+            <!-- Button Component -->
+            <Button>Search</Button>
+            <!-- End Of Button Component -->
         </div>
     </div>
 </template>
 
 <script>
+import Button from "../components/Button"
 export default {
+    components: {
+        Button
+    },
+
     data() {
         return {
             categories: []
@@ -40,11 +47,13 @@ export default {
                     'Access-Control-Allow-Origin': '*'
                 }
             }
-                fetch('https://rendezvous-events.onrender.com/events', headers)
+            fetch('https://rendezvous-events.onrender.com/events', headers)
                 .then((res) => res.json())
-                .then(data => { console.log(data); data.data.allEvents.forEach(event => {
-                    if(!this.categories.includes(event.category)) this.categories.push(event.category)
-                });})
+                .then(data => {
+                    console.log(data); data.data.allEvents.forEach(event => {
+                        if (!this.categories.includes(event.category)) this.categories.push(event.category)
+                    });
+                })
         },
     }
 
@@ -93,20 +102,6 @@ export default {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.search__button {
-    color: #FFF;
-    font-family: 'Gilroy-Light ☞';
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    border-radius: 10px;
-    padding: 12px 24px;
-    background: #783EAD;
-    border: none;
-    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
