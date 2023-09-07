@@ -6,14 +6,9 @@
         <img src="../assets/images/line.png" class="line">
         <div class="category__container">
             <select name="Categories" id="category">
-                <option value="none">Categories</option>
-                <option>All</option>
-                <option>Comedy</option>
-                <option>Religious</option>
-                <option>Tech</option>
-                <option>Health</option>
-                <option>Fitness</option>
-                <option>Education</option>
+                <option>category</option>
+                <option v-for="category in categories" :key="category.id" value="none">{{ category }}</option>
+
             </select>
         </div>
 
@@ -25,6 +20,34 @@
 
 <script>
 export default {
+    data() {
+        return {
+            categories: []
+        }
+    },
+
+    created() {
+        this.getCategories()
+    },
+
+    methods: {
+        // use the events api to get categories
+        getCategories() {
+            const headers = {
+                accept: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                }
+            }
+                fetch('https://rendezvous-events.onrender.com/events', headers)
+                .then((res) => res.json())
+                .then(data => { console.log(data); data.data.allEvents.forEach(event => {
+                    if(!this.categories.includes(event.category)) this.categories.push(event.category)
+                });})
+        },
+    }
+
+
 
 }
 </script>
@@ -35,7 +58,7 @@ export default {
     color: #432361;
     display: flex;
     gap: 16px;
-    width: 660px;
+    width: 600px;
     height: 100px;
     padding: 0px 24px;
     justify-content: space-between;

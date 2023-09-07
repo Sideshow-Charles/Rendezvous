@@ -30,81 +30,28 @@
         <!-- End of Events Header -->
 
         <!-- Event Cards -->
-        <div v-for="event in events" :key="event.id" class="event__card__container">
+        <div class="event__card__container">
 
           <!-- Single Event -->
-          <div class="event__card">
+          <nuxt-link :to="'/event/' + event.id" v-for="event in events" :key="event.id" class="event__card">
             <div class="event__image">
-              <img src="../assets/images/ISWIS.png" alt="Event Image">
+              <img :src=event.imageUrl alt="Event Image">
             </div>
             <div class="event__details">
               <p class="event__name">{{ event.title }}</p>
               <div class="event__date__and__time">
-                <p class="event__date">Sun, Oct 3rd</p>
-                <p class="event__time">6pm</p>
+                <p class="event__date">{{ event.date }}</p>
+                <p class="event__time">{{ event.time }}</p>
               </div>
-              <p class="event__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris
-                nisi ut aliquip ex ea commodo consequat.</p>
-              <p class="event__link">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+              <p class="event__description">{{ event.description }}</p>
+              <nuxt-link :to="'/event/' + event.id" class="event__link">View details <svg width="16" height="17"
+                  viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="16" height="16" transform="translate(0 0.5)" fill="white"
                     style="mix-blend-mode:multiply" />
                   <path d="M5 3.5V4.5H11.295L3 12.795L3.705 13.5L12 5.205V11.5H13V3.5H5Z" fill="#432361" />
-                </svg></p>
+                </svg></nuxt-link>
             </div>
-          </div>
-
-          <!-- End of Single Event -->
-
-          <!-- Single Event -->
-          <!-- <div class="event__card">
-          <div class="event__image">
-            <img src="../assets/images/NATIV5.png" alt="Event Image">
-          </div>
-          <div class="event__details">
-            <p class="event__name">ISWIS Live show</p>
-            <div class="event__date__and__time">
-              <p class="event__date">Sun, Oct 3rd</p>
-              <p class="event__time">6pm</p>
-            </div>
-            <p class="event__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris
-              nisi ut aliquip ex ea commodo consequat.</p>
-            <p class="event__link">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect width="16" height="16" transform="translate(0 0.5)" fill="white" style="mix-blend-mode:multiply" />
-                <path d="M5 3.5V4.5H11.295L3 12.795L3.705 13.5L12 5.205V11.5H13V3.5H5Z" fill="#432361" />
-              </svg></p>
-          </div>
-        </div> -->
-          <!-- End of Single Event -->
-
-          <!-- Single Event -->
-          <!-- <div class="event__card">
-          <div class="event__image">
-            <img src="../assets/images/Unprovoked.png" alt="Event Image">
-          </div>
-          <div class="event__details">
-            <p class="event__name">ISWIS Live show</p>
-            <div class="event__date__and__time">
-              <p class="event__date">Sun, Oct 3rd</p>
-              <p class="event__time">6pm</p>
-            </div>
-            <p class="event__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris
-              nisi ut aliquip ex ea commodo consequat.</p>
-            <p class="event__link">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect width="16" height="16" transform="translate(0 0.5)" fill="white" style="mix-blend-mode:multiply" />
-                <path d="M5 3.5V4.5H11.295L3 12.795L3.705 13.5L12 5.205V11.5H13V3.5H5Z" fill="#432361" />
-              </svg></p>
-          </div>
-        </div> -->
-          <!-- End of Single Event -->
+          </nuxt-link>
         </div>
         <!-- End of Events Card-->
       </section>
@@ -135,8 +82,6 @@
 import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import Footer from "../components/Footer";
-import axios from "axios"
-import apiService from "../services/apiService";
 export default {
   components: {
     Header,
@@ -145,27 +90,30 @@ export default {
   },
   data() {
     return {
-      events: [],
+      events: []
     }
   },
 
-  async created() {
-    // const callOptions = {
-      // mode: 'no-cors',
-     const headers = {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+  created() {
+    //call the function to get all events as soon as the page is rendered
+    this.getEvents()
+  },
 
+  methods: {
+    //fetch all events
+    getEvents() {
+      const headers = {
+        accept: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        }
       }
-    // }
-    try {
-      const response = await apiService.get('https://rendezvous-events.onrender.com/events', headers);
-      this.events = response.data
-    } catch (error) {
-      console.error('error fetching events:', error);
+
+      fetch('https://rendezvous-events.onrender.com/events', headers)
+        .then(res => res.json())
+        .then(data => { console.log(data); this.events = data.data.allEvents })
     }
   }
-
 }
 </script>
 <style scoped>
@@ -190,7 +138,7 @@ export default {
 .hero__items__container {
   display: flex;
   justify-content: center;
-  gap: 121px;
+  gap: 100px;
   margin: 450px 64px 82px 64px;
 }
 
@@ -242,7 +190,7 @@ export default {
 .event__card__container {
   display: flex;
   gap: 24px;
-  align-items: center;
+  align-items: flex-start;
   margin: 47px 64px 100px 64px;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -258,7 +206,7 @@ export default {
 
 .event__image img {
   width: 410px;
-  /* height: 240px; */
+  height: 240px;
 }
 
 .event__details {
@@ -266,7 +214,7 @@ export default {
 }
 
 .event__name {
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   color: #000;
   font-family: 'Gilroy-Medium ☞';
   font-size: 16px;
@@ -277,7 +225,7 @@ export default {
 }
 
 .event__date__and__time {
-  margin-top: 4px;
+  margin-top: 8px;
   display: flex;
   gap: 8px;
   color: #000;
@@ -296,7 +244,9 @@ export default {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
-  /* margin-bottom: 24px; */
+  margin-bottom: 24px;
+  height: 70px;
+  overflow: hidden;
 }
 
 .event__link {
@@ -306,7 +256,7 @@ export default {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-top: 24px;
+  padding-top: 128px;
 }
 
 .discover__container {
