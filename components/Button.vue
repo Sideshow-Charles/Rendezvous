@@ -1,12 +1,18 @@
 <template>
-    <button class="button"><nuxt-link to="#">
-            <slot/>
+    <button class="button" :class="btnStyle"><nuxt-link to="#">
+            <slot />
         </nuxt-link></button>
 </template>
 
 <script>
 export default {
-
+    // Using the button as a component to avoid repetition, which then leads to populating the codebase.
+props: {
+    btnStyle: {
+        type: String,
+        default: ''
+    }
+}
 }
 </script>
 
@@ -22,5 +28,11 @@ export default {
     padding: 12px 24px;
     background: #783EAD;
     border: none;
+}
+
+@media screen and (max-width: 1080px) {
+    .sign-up__button {
+        display: none;
+    }
 }
 </style>

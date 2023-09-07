@@ -16,7 +16,7 @@
             <li class="nav__item__right"><nuxt-link to="#">Log in</nuxt-link></li>
 
             <!-- Button Component -->
-            <Button>Sign up</Button>
+            <Button btnStyle="sign-up__button">Sign up</Button>
             <!-- End of Button Component -->
 
             <!-- navigation menu icon -->
@@ -36,8 +36,6 @@ export default {
     components: {
         Button
     },
-
-    name: 'Headers',
     // Using the header as a component to avoid repetition, which then leads to populating the codebase.
     props: {
         headerStyle: {
@@ -108,19 +106,6 @@ export default {
     margin: 0 24px
 }
 
-/* .sign-up__button {
-    color: #FFF;
-    font-family: 'Gilroy-Light ☞';
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    border-radius: 10px;
-    padding: 12px 24px;
-    background: #783EAD;
-    border: none;
-} */
-
 .hamburger__menu__icon {
     display: none;
     cursor: pointer;
@@ -138,18 +123,17 @@ export default {
     }
 }
 
-@media screen and (max-width: 1075px) {
+@media screen and (max-width: 1080px) {
 
     .nav__items__center,
-    .nav__item__right,
-    .sign-up__button {
+    .nav__item__right {
         display: none;
     }
-
     .hamburger__menu__icon {
-        display: block;
-    }
+    display: block;
 }
+}
+
 
 @media screen and (max-width: 980px) {
     .main__header {
