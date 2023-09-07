@@ -126,7 +126,6 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: lightgray;
-  /* filter: brightness(60%); */
   position: absolute;
   top: 0%;
   bottom: 0%;
@@ -138,6 +137,7 @@ export default {
 .hero__items__container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 100px;
   margin: 450px 64px 82px 64px;
 }
@@ -198,7 +198,7 @@ export default {
 
 .event__card {
   width: 410px;
-  /* height: 488px; */
+  /* height: 448px; */
   border-radius: 10px;
   border: 1px solid #E0E0E0;
   background: #FFF;
@@ -245,8 +245,9 @@ export default {
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 24px;
-  height: 70px;
+  height: 80px;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .event__link {
@@ -256,16 +257,13 @@ export default {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-top: 128px;
 }
 
 .discover__container {
   margin: 227px 64px 123px 64px;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   gap: 60px;
-  /* overflow: hidden; */
 }
 
 .discover__text__container {

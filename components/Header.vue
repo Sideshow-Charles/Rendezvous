@@ -50,7 +50,6 @@ export default {
     justify-content: space-between;
     margin: 0 64px;
     padding: 12px 24px;
-    /* width: 1312px;*/
     position: relative;
     top: 50px;
     z-index: 1000;

@@ -64,8 +64,6 @@ export default {
     justify-content: center;
     align-items: center;
     gap: 350px;
-    /* max-width: 90rem;
-    margin: 0 auto; */
 }
 
 .footer__logo__container img {

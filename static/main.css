@@ -51,19 +51,11 @@
     src: url("../assets/fonts/Gilroy-SemiBold.woff") format('woff');
 }
 
-/* html {
-    box-sizing: border-box;
-    overflow: auto !important;
-} */
-
 body {
-    /* max-width: 90rem;
-    margin: 0 auto; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* overflow: hidden; */
 }
 
 a {
@@ -71,9 +63,9 @@ a {
     color: inherit;
 }
 
-p {
+/* p {
     margin: 0 !important;
-}
+} */
 
 footer {
     margin: 0 !important;

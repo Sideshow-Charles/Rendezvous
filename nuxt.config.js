@@ -19,11 +19,6 @@ export default {
     ]
   },
 
-  axios: {
-    baseURL: 'https://rendezvous-events.onrender.com/events', // api base URL
-    credentials: true, // Include cookies and authentication headers
-  },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     "static/main.css"
