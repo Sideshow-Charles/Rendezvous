@@ -160,7 +160,7 @@ export default {
 <style scoped>
 .view__event {
     max-width: 90rem;
-    margin: 0 auto;
+    margin: 0 auto !important;
     padding: 0;
 }
 
@@ -357,6 +357,18 @@ export default {
 }
 
 /* Media Queries */
+
+@media screen and (min-width: 1600px) {
+    .hero__image__container {
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+}
+
+.event__details__container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+}
 @media screen and (max-width: 968px) {
     .hero__image__container {
         padding-top: 50px;

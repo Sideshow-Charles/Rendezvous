@@ -16,49 +16,50 @@
 
     <section class="landing__page__body">
 
-    <!--Events Container -->
-    <section class="events__container">
-      <!-- Events Header -->
-      <section class="events__header__container">
-        <p class="events__header__text__left">Trending events</p>
-        <p class="events__header__text__right">View all trending events <svg width="16" height="17" viewBox="0 0 16 17"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="16" height="16" transform="translate(0 0.5)" fill="white" style="mix-blend-mode:multiply" />
-            <path d="M5 3.5V4.5H11.295L3 12.795L3.705 13.5L12 5.205V11.5H13V3.5H5Z" fill="#432361" />
-          </svg> </p>
-      </section>
-      <!-- End of Events Header -->
+      <!--Events Container -->
+      <section class="events__container">
+        <!-- Events Header -->
+        <section class="events__header__container">
+          <p class="events__header__text__left">Trending events</p>
+          <p class="events__header__text__right">View all trending events <svg width="16" height="17" viewBox="0 0 16 17"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="16" height="16" transform="translate(0 0.5)" fill="white" style="mix-blend-mode:multiply" />
+              <path d="M5 3.5V4.5H11.295L3 12.795L3.705 13.5L12 5.205V11.5H13V3.5H5Z" fill="#432361" />
+            </svg> </p>
+        </section>
+        <!-- End of Events Header -->
 
-      <!-- Event Cards -->
-      <div class="event__card__container">
+        <!-- Event Cards -->
+        <div v-for="event in events" :key="event.id" class="event__card__container">
 
-        <!-- Single Event -->
-        <div class="event__card">
-          <div class="event__image">
-            <img src="../assets/images/ISWIS.png" alt="Event Image">
-          </div>
-          <div class="event__details">
-            <p class="event__name">ISWIS Live show</p>
-            <div class="event__date__and__time">
-              <p class="event__date">Sun, Oct 3rd</p>
-              <p class="event__time">6pm</p>
+          <!-- Single Event -->
+          <div class="event__card">
+            <div class="event__image">
+              <img src="../assets/images/ISWIS.png" alt="Event Image">
             </div>
-            <p class="event__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris
-              nisi ut aliquip ex ea commodo consequat.</p>
-            <p class="event__link">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect width="16" height="16" transform="translate(0 0.5)" fill="white" style="mix-blend-mode:multiply" />
-                <path d="M5 3.5V4.5H11.295L3 12.795L3.705 13.5L12 5.205V11.5H13V3.5H5Z" fill="#432361" />
-              </svg></p>
+            <div class="event__details">
+              <p class="event__name">{{ event.title }}</p>
+              <div class="event__date__and__time">
+                <p class="event__date">Sun, Oct 3rd</p>
+                <p class="event__time">6pm</p>
+              </div>
+              <p class="event__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris
+                nisi ut aliquip ex ea commodo consequat.</p>
+              <p class="event__link">View details <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="16" transform="translate(0 0.5)" fill="white"
+                    style="mix-blend-mode:multiply" />
+                  <path d="M5 3.5V4.5H11.295L3 12.795L3.705 13.5L12 5.205V11.5H13V3.5H5Z" fill="#432361" />
+                </svg></p>
+            </div>
           </div>
-        </div>
 
-        <!-- End of Single Event -->
+          <!-- End of Single Event -->
 
-        <!-- Single Event -->
-        <div class="event__card">
+          <!-- Single Event -->
+          <!-- <div class="event__card">
           <div class="event__image">
             <img src="../assets/images/NATIV5.png" alt="Event Image">
           </div>
@@ -78,11 +79,11 @@
                 <path d="M5 3.5V4.5H11.295L3 12.795L3.705 13.5L12 5.205V11.5H13V3.5H5Z" fill="#432361" />
               </svg></p>
           </div>
-        </div>
-        <!-- End of Single Event -->
+        </div> -->
+          <!-- End of Single Event -->
 
-        <!-- Single Event -->
-        <div class="event__card">
+          <!-- Single Event -->
+          <!-- <div class="event__card">
           <div class="event__image">
             <img src="../assets/images/Unprovoked.png" alt="Event Image">
           </div>
@@ -102,26 +103,26 @@
                 <path d="M5 3.5V4.5H11.295L3 12.795L3.705 13.5L12 5.205V11.5H13V3.5H5Z" fill="#432361" />
               </svg></p>
           </div>
+        </div> -->
+          <!-- End of Single Event -->
         </div>
-        <!-- End of Single Event -->
-      </div>
-      <!-- End of Events Card-->
-    </section>
-    <!-- End of Event Container-->
+        <!-- End of Events Card-->
+      </section>
+      <!-- End of Event Container-->
 
-    <!-- Discover Section -->
-    <section class="discover__container">
-      <section class="discover__text__container">
-        <p class="discover__text">Discover a World of Events Tailored Just for You.</p>
-        <button class="CTA-discover__events">View all events</button>
-      </section>
-      <section class="discover__images__container">
-        <img src="../assets/images/online.png" alt="discover online images">
-        <img src="../assets/images/physical.png" alt="discover online images">
-        <img src="../assets/images/hybrid.png" alt="discover online images">
+      <!-- Discover Section -->
+      <section class="discover__container">
+        <section class="discover__text__container">
+          <p class="discover__text">Discover a World of Events Tailored Just for You.</p>
+          <button class="CTA-discover__events">View all events</button>
+        </section>
+        <section class="discover__images__container">
+          <img src="../assets/images/online.png" alt="discover online images">
+          <img src="../assets/images/physical.png" alt="discover online images">
+          <img src="../assets/images/hybrid.png" alt="discover online images">
+        </section>
       </section>
     </section>
-  </section>
     <!-- End of Discover Section -->
 
     <!-- Footer Component -->
@@ -134,12 +135,33 @@
 import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import Footer from "../components/Footer";
+import axios from "axios"
 export default {
   components: {
     Header,
     SearchBar,
     Footer
+  },
+  data() {
+    return {
+      events: [],
+    }
+  },
+
+  async created() {
+    const fetchOptions = {
+      method: 'GET',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    fetch("https://rendezvous-events.onrender.com/events", fetchOptions)
+      .then(response => response.json())
+      .then(data => { console.log(data) })
   }
+
 }
 </script>
 <style scoped>

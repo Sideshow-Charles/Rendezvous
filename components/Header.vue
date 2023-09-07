@@ -126,6 +126,11 @@ export default {
         top: 50px;
         z-index: 1000;*/
     }
+
+    .view-event__header {
+        margin-top: 40px;
+        margin-bottom: 46px;
+    }
 }
 
 @media screen and (max-width: 1075px) {
