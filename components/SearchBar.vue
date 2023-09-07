@@ -27,6 +27,7 @@ export default {
     },
 
     created() {
+        // call the function that gets all categories as soon as the page is rendered
         this.getCategories()
     },
 
@@ -117,10 +118,7 @@ export default {
 
 @media screen and (max-width: 480px) {
     .search-bar__container {
-        /* flex-wrap: wrap; */
         width: 360px;
-        /* height: 100px; */
-        /* flex-direction: column; */
         padding-left: 12px;
         padding-right: 12px;
         gap: 20px;

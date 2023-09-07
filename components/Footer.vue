@@ -197,11 +197,6 @@ export default {
 }
 
 @media screen and (max-width: 1070px) {
-    /* .footer__container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 70px;
-    } */
     .footer__items {
         flex-direction: column;
         align-items: flex-start;
@@ -229,13 +224,6 @@ export default {
         padding-left: 16px;
         padding-right: 16px;
     }
-
-    /* .features,
-    .feature__items,
-    .company,
-    .company__item {
-        width: 100%;
-    } */
 }
 
 @media screen and (max-width: 320px) {

@@ -55,6 +55,7 @@ export default {
     top: 50px;
     z-index: 1000;
 }
+
 /* Header Styling For The Alternative Header */
 .view-event__header {
     background: transparent;
@@ -122,9 +123,6 @@ export default {
     .main__header {
         width: 1312px;
         margin: 0 auto;
-        /* position: relative;
-        top: 50px;
-        z-index: 1000;*/
     }
 
     .view-event__header {
@@ -150,8 +148,6 @@ export default {
     .main__header {
         width: 80%;
         margin: 0 auto;
-        /* padding-left: 12px;
-        padding-right: 12px; */
     }
 
     .view-event__header {
@@ -161,7 +157,7 @@ export default {
 
 @media screen and (max-width: 768px) {
     .view-event__header {
-       width: auto;
+        width: auto;
         margin-left: 0;
         margin-right: 0;
         padding-left: 0;
@@ -178,7 +174,7 @@ export default {
     }
 
     .view-event__header {
-       width: auto;
+        width: auto;
         margin-left: 0;
         margin-right: 0;
         padding-left: 0;

@@ -78,16 +78,8 @@
                                 <p class="single__ticket__header">Single</p> 
                                 <p class="single__ticket__price">{{ event.price == 0 ? "Free" : event.price }}</p>
                             </div>
-                            <!-- End of Single Ticket Price Container -->
-
-                            <!-- Pair Ticket Price Container -->
-                            <!-- <div class="pair__ticket__container">
-                                <p class="pair__ticket__header">Pair</p>
-                                <p class="pair__ticket__price">NGN 9,000</p>
-                            </div> -->
-                            <!-- End of Pair Ticket Price Container -->
                         </section>
-                        <!-- Ticket Container -->
+                        <!-- End of Ticket Container -->
                     </section>
                 </section>
                 <section class="event__details__right">
@@ -142,8 +134,6 @@ export default {
     },
 
     mounted() {
-        //    console.log(this.$route.params.id)
-        //    console.log(this.$route);
         this.getEvent(this.$route.params.id)
     },
 
@@ -185,15 +175,7 @@ export default {
 .event__details__container {
     margin-top: 48px;
     padding: 0 64px;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 37px; */
 }
-
-/* .event__details__left {
-    width: 75%;
-} */
 
 .event__name {
     color: #000;
