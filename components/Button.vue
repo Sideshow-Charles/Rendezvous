@@ -7,12 +7,12 @@
 <script>
 export default {
     // Using the button as a component to avoid repetition, which then leads to populating the codebase.
-props: {
-    btnStyle: {
-        type: String,
-        default: ''
+    props: {
+        btnStyle: {
+            type: String,
+            default: ''
+        }
     }
-}
 }
 </script>
 
@@ -32,6 +32,12 @@ props: {
 
 @media screen and (max-width: 1080px) {
     .sign-up__button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search__button {
         display: none;
     }
 }

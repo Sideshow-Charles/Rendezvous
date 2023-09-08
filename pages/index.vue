@@ -183,7 +183,11 @@ export default {
   color: red;
   font-family: 'Gilroy-Medium ☞';
   font-size: 24px;
-  margin: 50px auto;
+  margin-top: 50px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .events__header__text__left {
@@ -277,7 +281,7 @@ export default {
 }
 
 .discover__container {
-  margin: 227px 64px 123px 64px;
+  margin: 150px 64px 123px 64px;
   display: flex;
   justify-content: space-between;
   gap: 60px;

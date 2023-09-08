@@ -14,7 +14,7 @@
 
         <div class="search-button__container">
             <!-- Button Component -->
-            <Button>Search</Button>
+            <Button btnStyle="search__button">Search</Button>
             <!-- End Of Button Component -->
         </div>
     </div>
@@ -125,9 +125,9 @@ export default {
         text-align: left;
     }
 
-    .search__button {
+    /* .search__button {
         display: none;
-    }
+    } */
 }
 
 @media screen and (max-width: 375px) {
