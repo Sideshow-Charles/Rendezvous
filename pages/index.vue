@@ -32,6 +32,8 @@
         <!-- Event Cards -->
         <div class="event__card__container">
 
+          <p v-if="err" class="error">Unable to get events, Please contact support</p>
+
           <!-- Single Event -->
           <nuxt-link :to="'/event/' + event.id" v-for="event in events" :key="event.id" class="event__card">
             <div class="event__image">
@@ -90,10 +92,11 @@ export default {
     Footer,
     Button
   },
-  
+
   data() {
     return {
-      events: []
+      events: [],
+      err: ''
     }
   },
 
@@ -115,6 +118,10 @@ export default {
       fetch('https://rendezvous-events.onrender.com/events', headers)
         .then(res => res.json())
         .then(data => { console.log(data); this.events = data.data.allEvents })
+        .catch((error) => {
+          console.log(error);
+          this.err = error 
+        });
     }
   }
 }
@@ -170,6 +177,13 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin: 0 64px;
+}
+
+.error {
+  color: red;
+  font-family: 'Gilroy-Medium ☞';
+  font-size: 24px;
+  margin: 50px auto;
 }
 
 .events__header__text__left {

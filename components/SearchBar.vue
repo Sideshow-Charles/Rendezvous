@@ -53,7 +53,9 @@ export default {
                     console.log(data); data.data.allEvents.forEach(event => {
                         if (!this.categories.includes(event.category)) this.categories.push(event.category)
                     });
-                })
+                }).catch((error) => {
+                    console.log(error);
+                });
         },
     }
 

@@ -111,8 +111,8 @@
                         </section>
                     </section>
                     <div class="CTA-buy__ticket">
-                <Button>Buy now</Button>
-            </div>
+                        <Button>Buy now</Button>
+                    </div>
                 </section>
             </section>
             <!-- Event Description -->
@@ -159,6 +159,9 @@ export default {
             fetch(`https://rendezvous-events.onrender.com/events/${eventID}`, headers)
                 .then(res => res.json())
                 .then(data => { console.log(data); this.event = data.data.event; this.loading = false })
+                .catch((error) => {
+                    console.log(error);
+                });
         }
     }
 
