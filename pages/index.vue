@@ -37,7 +37,7 @@
 
         <!-- End of Loader -->
 
-        <div class="event__card__container">
+        <div v-else class="event__card__container">
 
           <p v-if="err" class="error">Unable to get events, Please contact support</p>
 
