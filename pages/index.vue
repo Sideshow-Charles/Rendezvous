@@ -30,6 +30,13 @@
         <!-- End of Events Header -->
 
         <!-- Event Cards -->
+        <!-- Loader -->
+        <div v-if="loading" class="loader">
+          <img src="../assets/svgs/loader.svg" alt="">
+        </div>
+
+        <!-- End of Loader -->
+
         <div class="event__card__container">
 
           <p v-if="err" class="error">Unable to get events, Please contact support</p>
@@ -96,7 +103,8 @@ export default {
   data() {
     return {
       events: [],
-      err: ''
+      err: '',
+      loading: true,
     }
   },
 
@@ -120,7 +128,7 @@ export default {
         .then(data => { console.log(data); this.events = data.data.allEvents })
         .catch((error) => {
           console.log(error);
-          this.err = error 
+          this.err = error
         });
     }
   }
