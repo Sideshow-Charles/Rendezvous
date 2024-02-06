@@ -41,7 +41,7 @@
                 values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
             </circle>
           </svg> <br>
-          Loading Events...
+         <p class="loader__text">Loading Events...</p>
         </div>
         <!-- End of Loader -->
 
@@ -197,6 +197,13 @@ export default {
 
 .loader {
   margin-top: 50px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loader__text {
+  margin-top: 10px;
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
