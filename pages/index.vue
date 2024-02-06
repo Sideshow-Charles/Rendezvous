@@ -41,7 +41,7 @@
                 values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
             </circle>
           </svg> <br>
-         <p class="loader__text">Loading Events...</p>
+          <p class="loader__text">Loading Events...</p>
         </div>
         <!-- End of Loader -->
 
@@ -133,7 +133,10 @@ export default {
 
       fetch('https://rendezvous-events.onrender.com/events', headers)
         .then(res => res.json())
-        .then(data => { console.log(data); this.events = data.data.allEvents })
+        .then(data => {
+          console.log(data); this.events = data.data.allEvents
+          this.loading = false
+        })
         .catch((error) => {
           console.log(error);
           this.err = error
@@ -487,4 +490,5 @@ export default {
   .discover__text {
     width: 100%;
   }
-}</style>
+}
+</style>
