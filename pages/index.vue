@@ -207,6 +207,12 @@ export default {
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
+  color: #432361;
+  font-family: 'Gilroy-Medium ☞';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .error {
