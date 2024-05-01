@@ -181,7 +181,7 @@ export default {
 
 .hero__image__container img {
     width: 100%;
-    height: 580px;
+    height: 100%;
     border-radius: 10px;
 }
 
