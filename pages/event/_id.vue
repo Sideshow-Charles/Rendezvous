@@ -1,5 +1,18 @@
 <template>
-    <div v-if="!loading">
+    <!-- Loader -->
+    <div v-if="loading" class="loader">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            style="margin: auto; background: rgb(255, 255, 255); display: block; shape-rendering: auto;" width="80px"
+            height="80px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+            <circle cx="50" cy="50" fill="none" stroke="#783ead" stroke-width="10" r="35"
+                stroke-dasharray="164.93361431346415 56.97787143782138">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s"
+                    values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+            </circle>
+        </svg>
+    </div>
+    <!-- End of Loader -->
+    <div v-else="!loading">
         <div class="view__event">
             <!-- Header Component -->
             <div class="header__container">
@@ -89,8 +102,8 @@
                         <section class="social__links__header">Contact Organizers</section>
                         <section class="social__links__icons__container">
                             <section class="social__links__icons">
-                                <a :href="event.organizer.email"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                <a :href="event.organizer.email"><svg width="32" height="32" viewBox="0 0 32 32"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M16 0C18.2095 0 20.2857 0.419048 22.2286 1.25714C24.1714 2.09524 25.8667 3.2381 27.3143 4.68571C28.7619 6.13333 29.9048 7.82857 30.7429 9.77143C31.581 11.7143 32 13.7905 32 16C32 18.2095 31.581 20.2857 30.7429 22.2286C29.9048 24.1714 28.7619 25.8667 27.3143 27.3143C25.8667 28.7619 24.1714 29.9048 22.2286 30.7429C20.2857 31.581 18.2095 32 16 32C13.7905 32 11.7143 31.581 9.77143 30.7429C7.82857 29.9048 6.13333 28.7619 4.68571 27.3143C3.2381 25.8667 2.09524 24.1714 1.25714 22.2286C0.419048 20.2857 0 18.2095 0 16C0 13.7905 0.419048 11.7143 1.25714 9.77143C2.09524 7.82857 3.2381 6.13333 4.68571 4.68571C6.13333 3.2381 7.82857 2.09524 9.77143 1.25714C11.7143 0.419048 13.7905 0 16 0ZM7.00952 20.1524L11.8095 16.7238L7.00952 13.2952V20.1524ZM24.9905 21.6762L19.1238 17.4857L16 19.7333L12.8381 17.4857L7.00952 21.6762V24H24.9905V21.6762ZM24.9905 13.2952L20.1905 16.7238L24.9905 20.1524V13.2952ZM24.9905 8H7.00952V10.3238L16 16.7238L24.9905 10.3238V8Z"
                                             fill="#783EAD" />
@@ -169,6 +182,14 @@ export default {
 </script>
 
 <style scoped>
+.loader {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
 .view__event {
     max-width: 90rem;
     margin: 0 auto !important;
